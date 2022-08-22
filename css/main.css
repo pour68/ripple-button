@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Lemon", cursive;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    padding: 0.6rem 1.5rem;
+    background-color: #363636;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(33, 105, 243, 0.5);
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
